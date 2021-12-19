@@ -4,7 +4,7 @@ from torch.nn import functional as F
 import re
 from torch.nn import functional as F
 from CLIP import clip
-from pytti5.Perceptor import CLIP_PERCEPTORS
+from pytti.Perceptor import CLIP_PERCEPTORS
 
 def spherical_dist_loss(x, y):
   x = F.normalize(x, dim=-1)
