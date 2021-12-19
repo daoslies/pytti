@@ -124,7 +124,7 @@ def mask_image(path, inverted = False, device = DEVICE):
 
 @torch.no_grad()
 def mask_semantic(text, device = DEVICE):
-  perceptors = pytti.Perceptor.CLIP_PERCEPTORS
+  perceptors = pytti5.Perceptor.CLIP_PERCEPTORS
   embeds = cat_with_pad([p.encode_text(clip.tokenize(text).to(device)).float() for p in perceptors])
   @torch.no_grad()
   def mask(pos, size, emb, thresh = 0.5):
