@@ -1,4 +1,4 @@
-#from pytti import *
+from pytti5 import *
 from pytti5.Notebook import Rotoscoper
 import torch
 from torch import nn
