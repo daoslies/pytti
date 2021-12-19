@@ -23,7 +23,7 @@ class LatentLoss(MSELoss):
     self.direct_loss.set_comp(pil_image.resize(self.image_shape, Image.LANCZOS))
 
   @classmethod
-  @vram_usage_mode('Latent Image Loss')
+  #@vram_usage_mode('Latent Image Loss')
   @torch.no_grad()
   def TargetImage(cls, prompt_string, image_shape, pil_image = None, is_path = False, device = DEVICE):
     text, weight, stop = parse(prompt_string, r"(?<!^http)(?<!s):|:(?!/)" ,['', '1', '-inf'])
