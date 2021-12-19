@@ -1,4 +1,4 @@
-from pytti.LossAug import MSELoss
+from pytti5.LossAug import MSELoss
 import torch
 from kornia.color import rgb_to_hsv
 
