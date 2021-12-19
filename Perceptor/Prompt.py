@@ -1,5 +1,5 @@
 from pytti import *
-from pytti.Notebook import Rotoscoper
+from pytti5.Notebook import Rotoscoper
 import torch
 from torch import nn
 from torch.nn import functional as F
