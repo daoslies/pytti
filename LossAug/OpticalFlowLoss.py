@@ -25,7 +25,7 @@ finally:
   os.chdir('..')
 
 from pytti5.Transforms import apply_flow
-from pytti import fetch, to_pil, DEVICE, vram_usage_mode
+from pytti5 import fetch, to_pil, DEVICE, vram_usage_mode
 from pytti.Image.RGBImage import RGBImage
 
 GMA = None
