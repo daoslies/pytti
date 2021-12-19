@@ -138,6 +138,12 @@ MASK_DICT = {'a':mask_all, 'r':mask_right, 'l':mask_left, 'd':mask_down, 'u':mas
 
 @torch.no_grad()
 def parse_prompt(embedder, prompt_string = "", pil_image=None, device = DEVICE):
+  
+  def parse(string, split, defaults):
+    tokens = re.split(split, string, len(defaults)-1)
+    tokens = tokens+defaults[len(tokens):]
+    return tokens
+
   text, weight, stop = parse(prompt_string,r":(?![^\[]*\])",['', '1', '-inf'])
   weight, mask, cutoff = parse(weight,r"_(?![^\[]*\])",['1','a','0.5000873264']) #can you guess what this does?
   text = text.strip()
