@@ -20,7 +20,7 @@ class MSELoss(Loss):
     self.use_mask = False
 
   @classmethod
-  @vram_usage_mode('Loss Augs')
+  #@vram_usage_mode('Loss Augs')
   @torch.no_grad()
   def TargetImage(cls, prompt_string, image_shape, pil_image = None, is_path = False, device = DEVICE):
     text, weight, stop = parse(prompt_string, r"(?<!^http)(?<!s):|:(?!/)" ,['', '1', '-inf'])
