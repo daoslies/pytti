@@ -2,8 +2,8 @@ import math, re
 from PIL import Image
 from torchvision.transforms import functional as TF
 from torch.nn import functional as F
-from pytti.LossAug import Loss
-from pytti.Notebook import Rotoscoper
+from pytti5.LossAug import Loss
+from pytti5.Notebook import Rotoscoper
 from pytti import *
 import torch
 
