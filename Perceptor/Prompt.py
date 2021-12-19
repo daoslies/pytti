@@ -12,6 +12,11 @@ from pytti.Image import RGBImage
 from collections import defaultdict
 import numpy as np
 
+def parse(string, split, defaults):
+  tokens = re.split(split, string, len(defaults)-1)
+  tokens = tokens+defaults[len(tokens):]
+  return tokens
+
 def spherical_dist_loss(x, y):
   x = F.normalize(x, dim=-1)
   y = F.normalize(y, dim=-1)
