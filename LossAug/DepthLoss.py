@@ -1,7 +1,7 @@
 from infer import InferenceHelper
 from pytti5.LossAug import MSELoss
 import gc, torch, os, math
-from pytti import DEVICE, vram_usage_mode
+from pytti5 import DEVICE, vram_usage_mode
 from torchvision.transforms import functional as TF
 from torch.nn import functional as F
 from PIL import Image, ImageOps
