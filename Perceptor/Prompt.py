@@ -1,4 +1,4 @@
-from pytti import *
+#from pytti import *
 from pytti5.Notebook import Rotoscoper
 import torch
 from torch import nn
@@ -6,7 +6,7 @@ from torch.nn import functional as F
 from torchvision.transforms import functional as TF
 import re, math
 from CLIP import clip
-import pytti
+#import pytti
 from PIL import Image
 from pytti.Image import RGBImage
 from collections import defaultdict
