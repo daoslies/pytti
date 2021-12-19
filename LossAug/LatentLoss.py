@@ -1,4 +1,4 @@
-from pytti.LossAug import MSELoss
+from pytti5.LossAug import MSELoss
 import gc, torch, os, math
 from pytti import DEVICE
 from torchvision.transforms import functional as TF
