@@ -1,4 +1,4 @@
-from pytti.LossAug import MSELoss, LatentLoss
+from pytti5.LossAug import MSELoss, LatentLoss
 import sys, os, gc
 import argparse
 import os
@@ -12,7 +12,7 @@ from torch.nn import functional as F
 from PIL import Image
 import imageio
 import matplotlib.pyplot as plt
-from pytti.Notebook import Rotoscoper
+from pytti5.Notebook import Rotoscoper
 from torchvision.transforms import functional as TF
 
 os.chdir('GMA')
