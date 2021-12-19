@@ -1,5 +1,5 @@
 from pytti5 import *
-from pytti5.Perceptor import CLIP_PERCEPTORS as perceptors
+from pytti5.Perceptor import CLIP_PERCEPTORS
 
 from pytti5.Notebook import Rotoscoper
 import torch
@@ -126,7 +126,7 @@ def mask_image(path, inverted = False, device = DEVICE):
 
 @torch.no_grad()
 def mask_semantic(text, device = DEVICE):
-  #perceptors = pytti5.Perceptor.CLIP_PERCEPTORS
+  perceptors = CLIP_PERCEPTORS
   embeds = cat_with_pad([p.encode_text(clip.tokenize(text).to(device)).float() for p in perceptors])
   @torch.no_grad()
   def mask(pos, size, emb, thresh = 0.5):
