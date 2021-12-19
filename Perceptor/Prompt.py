@@ -12,6 +12,8 @@ from pytti.Image import RGBImage
 from collections import defaultdict
 import numpy as np
 
+DEVICE = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+
 def parse(string, split, defaults):
   tokens = re.split(split, string, len(defaults)-1)
   tokens = tokens+defaults[len(tokens):]
