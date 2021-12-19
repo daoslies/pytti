@@ -39,11 +39,11 @@ class Loss(nn.Module):
     loss  =  loss_raw * weight.sign()
     return weight.abs() * replace_grad(loss, torch.maximum(loss, stop)), loss_raw
 
-from pytti.LossAug.TVLoss import TVLoss
-from pytti.LossAug.MSELoss import MSELoss
-from pytti.LossAug.OpticalFlowLoss import OpticalFlowLoss, TargetFlowLoss
-from pytti.LossAug.DepthLoss import DepthLoss
-from pytti.LossAug.EdgeLoss import EdgeLoss
-from pytti.LossAug.LatentLoss import LatentLoss
-from pytti.LossAug.HSVLoss import HSVLoss
+from pytti5.LossAug.TVLoss import TVLoss
+from pytti5.LossAug.MSELoss import MSELoss
+from pytti5.LossAug.OpticalFlowLoss import OpticalFlowLoss, TargetFlowLoss
+from pytti5.LossAug.DepthLoss import DepthLoss
+from pytti5.LossAug.EdgeLoss import EdgeLoss
+from pytti5.LossAug.LatentLoss import LatentLoss
+from pytti5.LossAug.HSVLoss import HSVLoss
 LOSS_DICT = {'edge':EdgeLoss, 'depth':DepthLoss}
