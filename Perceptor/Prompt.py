@@ -206,7 +206,7 @@ class Prompt(nn.Module):
 
 class MultiClipImagePrompt(Prompt):
   @torch.no_grad()
-  @vram_usage_mode('Image Prompts')
+  #@vram_usage_mode('Image Prompts')
   def __init__(self, embeds, positions, sizes, embedder, weight, stop, text, prompt_string, mask = mask_all):
     self.input_axes = ('c', 'n', 'i')
     super().__init__(format_input(embeds,embedder,self), weight, stop, text+" (semantic)", prompt_string, mask = mask)
@@ -215,7 +215,7 @@ class MultiClipImagePrompt(Prompt):
     self.register_buffer('sizes'    ,format_input(sizes,embedder,self))
   
   @torch.no_grad()
-  @vram_usage_mode('Image Prompts')
+  #@vram_usage_mode('Image Prompts')
   def set_image(self, embedder, pil_image):
     width, height = pil_image.size
     img = RGBImage(width, height)
